@@ -147,10 +147,15 @@
     var eventName;
     eventName = getQueryString("eventName");
     appendToElement(eventName);
-    return _.delay(function() {
-      optimizeSwipe("480x208");
-      return optimizeSwipe("320x356");
-    }, 100);
+    optimizeSwipe("480x208");
+    return optimizeSwipe("320x356");
   };
+
+  /*  _.delay(->
+      optimizeSwipe("480x208")
+      optimizeSwipe("320x356")
+    , 100)
+  */
+
 
 }).call(this);

@@ -126,7 +126,8 @@ var slab = {
    get: function(req, res){
       //var theUrl = 'http://localhost:8080/uppercut/crawl?eventName='+req.query.eventName;
       //
-      var theUrl = 'http://localhost:8080/simple-slab/slab/index?eventName='+req.query.eventName+'&screenSize='+req.query.screenSize;
+      //var theUrl = 'http://localhost:8080/simple-slab/slab/index?eventName='+req.query.eventName+'&screenSize='+req.query.screenSize;
+      var theUrl = 'http://localhost:8080/uppercut/crawl?eventName='+req.query.eventName;
       phantomContent(theUrl, function(content){
          res.send(content);
       });
@@ -145,6 +146,7 @@ app.get('/simple-slab/static/js/libs/jquery.slabtext.js', slabText.get);
 app.get('/static/js/libs/jquery.slabtext.js', slabText.get);
 app.get('/simple-slab/static/js/libs/app.js', appjs.get);
 app.get('/static/jquery.js', jqueryjs.get);
+app.get('/static/js/libs/jquery.js', jqueryjs.get);
 app.get('/static/plugins/jquery-1.7.1/js/jquery/jquery-1.7.1.min.js', jqueryjs.get);
 app.get('/simple-slab/static/js/libs/jquery.js', jqueryjs.get);
 app.get('/static/coffee/uppercut/optimizedSlab.js', optimizedSlab.get);
