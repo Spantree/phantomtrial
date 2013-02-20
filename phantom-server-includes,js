@@ -1,0 +1,19 @@
+var page = require('webpage').create();
+var system = require('system');
+
+page.onLoadFinished = function(status){
+	console.log(page.content);
+	phantom.exit();
+};
+
+page.open(system.args[1], function(){});
+/*
+page.open(system.args[1], function(){
+	console.log("Opening " + system.args[1]);
+	page.includeJs('http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', function(){
+		page.evaluate(function(){
+		});
+		//phantom.exit();
+	});
+});
+*/
